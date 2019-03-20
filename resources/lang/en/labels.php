@@ -205,6 +205,8 @@ return [
                 'question'  => 'Question',
                 'updatedat' => 'Updated At',
                 'all'       => 'All',
+                'category'  => 'Category'
+
             ],
         ],
 

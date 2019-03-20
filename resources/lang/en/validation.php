@@ -221,6 +221,7 @@ return [
                     'question' => 'Question',
                     'answer'   => 'Answer',
                     'status'   => 'Status',
+                    'category' => 'Category',
             ],
         ],
 

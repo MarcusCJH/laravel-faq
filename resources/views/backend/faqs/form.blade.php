@@ -31,6 +31,13 @@
             </div>
         </div><!--col-lg-3-->
     </div><!--form control-->
+    <div class="form-group">
+        {{ Form::label('category', trans('validation.attributes.backend.faqs.category'), ['class' => 'col-lg-2 control-label required']) }}
+
+        <div class="col-lg-10">
+            {{ Form::text('category', null, ['class' => 'form-control box-size', 'placeholder' => trans('validation.attributes.backend.faqs.category'), 'required' => 'required']) }}
+        </div><!--col-lg-10-->
+    </div><!--form control-->
 </div>
 @section('after-scripts')
     <script type="text/javascript">

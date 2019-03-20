@@ -44,6 +44,8 @@ class FaqsTableController extends Controller
             ->addColumn('actions', function ($faqs) {
                 return $faqs->action_buttons;
             })
+            ->escapeColumns(['category'])
+
             ->make(true);
     }
 }

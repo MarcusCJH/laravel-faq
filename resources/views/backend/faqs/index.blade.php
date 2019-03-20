@@ -26,6 +26,7 @@
                             <th>{{ trans('labels.backend.faqs.table.status') }}</th>
                             <th>{{ trans('labels.backend.faqs.table.updatedat') }}</th>
                             <th>{{ trans('labels.general.actions') }}</th>
+                            <th>{{ trans('labels.backend.faqs.table.category') }}</th>
                         </tr>
                     </thead>
                     <thead class="transparent-bg">
@@ -41,9 +42,12 @@
                             <th>
                                 {!! Form::select('status', [1 => 'Active', 0 => 'InActive'], null, ["class" => "search-input-select form-control", "data-column" => 2, "placeholder" => trans('labels.backend.faqs.table.all')]) !!}
                             </th>
+                            <th></th>
+                            <th></th>
+                            <th> {!! Form::text('category', null, ["class" => "search-input-text form-control", "data-column" => 5, "placeholder" => trans('labels.backend.faqs.table.category')]) !!}
+                                <a class="reset-data" href="javascript:void(0)"><i class="fa fa-times"></i></a></th>
                             {{-- <th></th> --}}
-                            <th></th>
-                            <th></th>
+
                         </tr>
                     </thead>
                 </table>
@@ -82,7 +86,8 @@
                     {data: 'answer', name: '{{config('module.faqs.table')}}.answer'},
                     {data: 'status', name: '{{config('module.faqs.table')}}.status'},
                     {data: 'updated_at', name: '{{config('module.faqs.table')}}.updated_at'},
-                    {data: 'actions', name: 'actions', searchable: false, sortable: false}
+                    {data: 'actions', name: 'actions', searchable: false, sortable: false},
+                    {data: 'category', name: '{{config('module.faqs.table')}}.category'}
                 ],
                 order: [[1, "asc"]],
                 searchDelay: 500,
