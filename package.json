@@ -16,9 +16,7 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.1.1",
     "laravel-mix": "^2.1.14",
-    "lodash": "^4.17.4",
-    "vue": "^2.6.8",
-    "webpack-rtl-plugin": "^1.8.1"
+    "lodash": "^4.17.4"
   },
   "dependencies": {
     "bootstrap": "^3.4.1",
@@ -30,6 +28,8 @@
     "node-sass": "^4.11.0",
     "pluralize": "^7.0.0",
     "select2": "^4.0.4",
-    "tinymce": "^4.9.3"
+    "tinymce": "^4.9.3",
+    "vue": "^2.5.17",
+    "webpack-rtl-plugin": "^1.7.0"
   }
 }
