@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Settings\Setting;
 use App\Repositories\Frontend\Pages\PagesRepository;
+use DB;
 
 /**
  * Class FrontendController.
@@ -18,8 +19,8 @@ class FrontendController extends Controller
     {
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
-
-        return view('frontend.index', compact('google_analytics', $google_analytics));
+        $faq = DB::table('faqs')->get();
+        return view('frontend.index', compact('google_analytics', $google_analytics))->with('faqs',$faq);
     }
 
     /**
