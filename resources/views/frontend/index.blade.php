@@ -9,7 +9,7 @@ $faqCount = 1;
 ?>
 
 <div class="row">
-   
+
     @foreach( $category as $categoryValue )
         @if(is_null($categoryValue->deleted_at))
             <div class="col-xs-12">
