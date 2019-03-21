@@ -19,8 +19,9 @@ class FrontendController extends Controller
     {
         $settingData = Setting::first();
         $google_analytics = $settingData->google_analytics;
-        $faq = DB::table('faqs')->get();
-        return view('frontend.index', compact('google_analytics', $google_analytics))->with('faqs',$faq);
+        $category = DB::table('faqs')->select('id','category','deleted_at')->groupBy('category')->get();
+        $faqs = DB::table('faqs')->get();
+        return view('frontend.index', compact('google_analytics', $google_analytics,'faqs','category'));
     }
 
     /**
