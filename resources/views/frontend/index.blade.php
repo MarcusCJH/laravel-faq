@@ -17,7 +17,7 @@ $faqCount = 1;
                     <div class="panel-heading" role="tab" id="{{$catCount}}">
                         <h4 class="panel-title">
                             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{$catCount}}" aria-expanded="false" aria-controls="collapseThree">
-                                <h2>{{ $categoryValue->category }}</h2>
+                                <h2>{{ $categoryValue->category }} &#x25bc;</h2>
                             </a>
                         </h4>
                     </div>
@@ -27,7 +27,7 @@ $faqCount = 1;
                                         @if(is_null($faqValue->deleted_at) && $faqValue->status == 1)
                                             @if($faqValue->category == $categoryValue->category)
                                     <div class="panel-body">
-                                        <h3>{{$faqCount++}}.&nbsp; {{ $faqValue->question }}</h3>
+                                        <h3>{{$faqCount++}}.&nbsp;&nbsp; {{ $faqValue->question }}</h3>
                                         {!!$faqValue->answer!!}
 
 
